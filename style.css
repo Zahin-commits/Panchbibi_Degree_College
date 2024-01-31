@@ -1,0 +1,346 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'); */
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('./fonts/Roboto.ttf');
+}
+*{
+ padding: 0px;
+ margin: 0px;
+ box-sizing: border-box;
+ font-family: 'Roboto', sans-serif; 
+}
+
+body{
+ width: 100vw;
+ height: 100vh;
+ overflow-x: hidden;
+}
+
+h1{
+ text-transform: uppercase;
+ border-bottom: 2px solid tomato;
+}
+
+header.navbar{
+ display: flex;
+ width: 100vw;
+ position: fixed;
+ top: 0px;
+ left: 0px;
+ z-index: 3;
+ background-color:#181818cb;
+ padding: 10px 20px;
+}
+
+.navbar ul{
+ display: flex;
+ list-style-type: none;
+ margin-left: auto;
+}
+
+.navbar ul li {
+ margin-inline: 10px; 
+ position: relative;
+}
+
+.navbar ul li::after{
+ content: '';
+ width: 0%;
+ height: 2px;
+ position: absolute;
+ bottom: -1.5px;
+ left: 50%;
+ transform: translate(-50%);
+ border-radius: 2px;
+ background-color: tomato;
+ transition: all 300ms ease-in-out;
+}
+.navbar ul li:hover::after{
+ width: 100%;
+}
+
+.navbar ul li a{
+ color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+main.hero_section{
+ color: white;
+ height: 100vh;
+ width: 100vw;
+ text-align: center;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ position: relative;
+ background:url("bannerBg3.jpeg")  no-repeat center center/cover;
+/*  background:url("banner.jpeg");
+ background-position: top;
+ background-repeat: no-repeat;
+ background-size: auto; */
+}
+
+main.hero_section::after{
+ content: '';
+ width: 100vw;
+ height: 100vh;
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ background-color: rgba(0, 0, 0, 0.7);
+ backdrop-filter: blur(2px);
+}
+
+.hero_section .banner{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ z-index: 2;
+}
+
+.hero_section .banner h1{
+ font-size: 50px; 
+ text-transform: uppercase;
+}
+
+.hero_section .banner p{
+ opacity: 0.7;
+ margin: 10px;
+}
+
+.hero_section .banner > a{
+ height: 30px;
+ width: 80px;
+ text-decoration: none;
+ text-transform: uppercase;
+ background-color: white;
+ color: tomato;
+ border: none;
+ border-radius: 3px;
+ padding: 5px 15px;
+ margin: 10px;
+ position: relative;
+ transition: all 300ms ease-in-out;
+}
+
+.hero_section .banner > a span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 3;
+}
+
+.hero_section .banner > a::after{
+    content: '';
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    bottom: -0px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 2px;
+    background-color: tomato;
+    transition: all 300ms ease-in-out;
+    z-index: 0;
+}
+
+.hero_section .banner > a:hover{
+ color: white;   
+}
+
+.hero_section .banner > a:hover::after{
+ width: 100%;
+}
+
+/*----------------
+     contact us
+ ----------------*/
+
+ body#contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ }
+
+ #contact h1{
+  text-transform: uppercase;
+  margin: 20px;
+ }
+
+ #contact form{
+  display: flex;
+  flex-direction: column;
+  background-color: #181818;
+  padding: 15px 10px;
+  border-radius: 8px;
+ }
+
+ #contact form .input_box{
+    position: relative;
+     margin-block: 12px;
+     display: flex;
+     border-bottom: 2px solid rgba(255, 99, 71, 0.616);
+}
+
+ #contact form .input_box::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    bottom: -1.5px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 2px;
+    background-color: tomato;
+    transition: all 300ms ease-in-out;
+}
+
+#contact form .input_box:hover::after{
+ width: 100%;
+}
+
+#contact form .input_box svg{ 
+ color: rgba(255, 255, 255, 0.822);
+ width: 24px;
+ margin-right: 5px;
+}
+ /* #contact form>input,#contact form>textarea{ */
+ #contact form input{
+ width: 250px;
+ color: white;
+ background-color: transparent;
+ border: none;
+ outline: none;
+ font-size: 18px;
+ margin-block: 3px;
+ }
+
+ #contact form>button{
+  color: tomato;
+  font-size: 18px;
+  border: none;
+  padding-block: 5px;
+  background-color: white;
+  text-transform: uppercase;
+  margin-top: 15px;
+  transition: all 300ms ease-in-out;
+ }
+
+ #contact form>button:hover{
+  color: white;
+  background-color: tomato;
+ }
+
+/*-----------
+ about us
+------------*/
+
+body#about{
+ text-align: center;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+#about h1{
+ margin-top: 50px;
+ margin-bottom: 10px;
+}
+
+.gallery {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ text-align: center;
+}
+
+.gallery .video_container{
+ margin-block: 20px;
+}
+
+.gallery .picture_container{
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery .picture_container img{
+ margin: auto;
+ max-width: 300px;
+ transition: all 200ms ease-out;
+}
+
+.gallery .picture_container img:hover{
+ transform: scale(1.05);
+}
+
+/* -----------
+  notice
+-------------*/
+
+body#notice{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ text-align: center;
+}
+
+#notice h1{
+ margin-top: 50px;
+ margin-bottom: 10px;
+}
+
+#notice table{
+ margin: 20px;
+ border-collapse: collapse;
+ border-radius: 10px;
+ border: 2px solid white;
+}
+
+#notice table tr:nth-child(odd){
+ color: white;
+ background-color: #181818;
+}
+#notice table tr:nth-child(even){
+ color: white;
+ background-color: #181818e0;
+}
+
+#notice table th{
+ color: white;
+ background-color: tomato;
+ padding: 5px 10px;
+}
+
+#notice table td{
+ padding: 5px 10px;
+}
+
+#notice table caption{
+ font-size: 25px;
+}
+
+@media (max-width:450px){
+ .hero_section .banner h1{
+   font-size: 35px;
+   border-bottom: none;
+ }
+
+ header.navbar{
+  padding: 10px 0px;
+ }
+
+ .navbar ul{
+  margin: auto;
+  font-size: 15px;
+ }
+
+ main.hero_section{
+  background:url("banner_mobile.jpeg")  no-repeat center center/cover;
+}
+}
